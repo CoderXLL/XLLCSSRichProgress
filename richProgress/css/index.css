@@ -1,0 +1,92 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    position: relative;
+    text-align: center;
+}
+
+.content{
+    position: absolute;
+    width: 120px;
+    height: 135px;
+    background: yellow;
+    top: 170px;
+    left: 290px;
+    border-radius: 8px;
+    animation: contentAnim .8s linear 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes contentAnim {
+    from {width: 120px; height: 135px; background-color: yellow; top: 170px}
+    to {width: 400px; height: 10px; background-color: gray; top: 240px}
+}
+
+.container{
+    width: 100px;
+    margin: 100px auto 0px;
+    animation: containerAnim 3s linear 1;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    /*animation-timing-function: ease-in-out;*/
+    position: absolute;
+    top: 100px;
+    left: 300px;
+}
+
+@keyframes containerAnim {
+    0% {top: 100px; left: 300px}
+    5% {top: 20px}
+    6% {top: 30px}
+    9% {top: 80px}
+    10% {top: 100px; left: 245px}
+    12% {top: 100px; left: 245px; transform: rotate(10deg)}
+    20% {left: 295px; transform: rotate(10deg)}
+    30% {left: 345px; transform: rotate(10deg)}
+    50% {left: 395px; transform: rotate(10deg)}
+    70% {left: 473px; transform: rotate(18deg)}
+    90% {left: 551px; transform: rotate(18deg)}
+    98% {left: 629px; transform: rotate(18deg)}
+    100% {left: 638px; transform: rotate(0deg)}
+}
+
+.square{
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    margin: 0px auto;
+    animation: squareAnim .8s ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes squareAnim {
+    /*0% {width: 70px; height: 70px}*/
+    /*50% {width: 85px; height: 65px}*/
+    /*60% {width: 87px; height: 64px}*/
+    /*90% {width: 95px; height: 61px}*/
+    /*100% {width: 100px; height: 60px}*/
+    from {width: 40px; height: 40px; border-radius: 0px}
+    to {width: 55px; height: 30px; border-radius: 5px}
+}
+
+.trangle{
+    width: 0px;
+    border-top: 38px solid green;
+    border-right: 38px solid transparent;
+    /*border-bottom: 50px solid transparent;*/
+    border-left: 38px solid transparent;
+    margin: 0px auto;
+    animation: trangleAnim .8s ease-in-out 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes trangleAnim {
+    from {border-top: 38px solid green; border-right: 38px solid transparent; border-left: 38px solid transparent}
+    to {border-top: 8px solid green; border-right: 8px solid transparent; border-left: 8px solid transparent}
+}
